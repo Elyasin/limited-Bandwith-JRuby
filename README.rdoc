@@ -1,0 +1,26 @@
+== README
+
+A test application to test a web app in a limited bandwith situation. I am assuming multiple JSON API calls from the AngularJS client to a Rails server.
+
+Testing using Chrome developer tools to stop the internet connection while pulling data (i.e., server sleeps) to show that re-establishing the connection will cause the APIs to restart.
+
+Includes:
+
+* JRuby 9.0.0.0.pre2 
+
+* Rails 4
+
+* Angular 1.x
+
+* Postgres (although no database tables involved at this point)
+
+Install:
+
+* clone then bundle install
+
+* start server (using puma) bundle exec puma -C config/puma.rb
+
+* go to: localhost:3000  to see 10 API calls in process (several in parallel due to multi-process of Puma)
+
+
+
